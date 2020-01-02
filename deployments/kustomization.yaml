@@ -9,9 +9,9 @@ secretGenerator:
   - password=c@ll1c0d3r 
 - name: mysql-db-url
   literals:
-  - database=polls
-  - url=jdbc:mysql://polling-app-mysql:3306/polls?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+  - database=blogs
+  - url=jdbc:mysql://blog-app-mysql:3306/blogs?useSSL=false
 resources:
   - mysql-deployment.yaml
-  - polling-app-server.yaml
+  - blog-app-server.yaml
   - polling-app-client.yaml  
