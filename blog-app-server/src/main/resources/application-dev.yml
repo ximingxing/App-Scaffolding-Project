@@ -2,7 +2,7 @@ spring:
   jackson:
     default-property-inclusion: non_null # 剔除JSON中的空数据
   datasource:
-    url: jdbc:mysql://${mysql_ip}:3306/intermediate_defense_system?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&${mysql_extra_options}
+    url: jdbc:mysql://localhost:3306/blogs?characterEncoding=UTF-8&useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -60,37 +60,12 @@ spring:
         reset-enable: true
         login-username: druid
         login-password: druid
-
-  #邮件服务器的配置
-  mail:
-    host: smtp.exmail.qq.com
-    port: 25
-    username: XXXX@bupt.edu.cn
-    password: //此处为授权码
-    default-encoding: UTF-8
-
-# mybatis 相关配置
-mybatis:
-  configuration:
-    # 当没有为参数提供特定的 JDBC 类型时，为空值指定 JDBC 类型。
-    # oracle数据库建议配置为JdbcType.NULL, 默认是Other
-    jdbc-type-for-null: 'null'
-    # 是否打印sql语句 调试的时候可以开启
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  type-aliases-package: com.ximingxing.blog.server.pojo
-  mapper-locations: classpath:mappers/*.xml
-
-mapper:
-  mappers:
-    - tk.mybatis.springboot.util.MyMapper
-  not-empty: false
-  identity: MYSQL
-
-pagehelper:
-  helperDialect: mysql
-  reasonable: true
-  supportMethodsArguments: true
-  params: count=countSql
+  # Hibernate Properties
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
 
 logging:
   path: /log
