@@ -14,4 +14,4 @@ secretGenerator:
 resources:
   - mysql-deployment.yaml
   - blog-app-server.yaml
-  - polling-app-client.yaml  
+  - blog-app-client.yaml  
