@@ -1,23 +1,23 @@
 package com.ximingxing.blog.security.entity;
 
 import com.ximingxing.blog.system.entity.User;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
 /**
- * @author shuang.kou
+ * Description: JWT User
+ * Created By xxm
  */
+@NoArgsConstructor
 public class JwtUser implements UserDetails {
 
     private Integer id;
     private String username;
     private String password;
     private Collection<? extends GrantedAuthority> authorities;
-
-    public JwtUser() {
-    }
 
     /**
      * 通过 user 对象创建jwtUser
@@ -73,5 +73,4 @@ public class JwtUser implements UserDetails {
                 ", authorities=" + authorities +
                 '}';
     }
-
 }

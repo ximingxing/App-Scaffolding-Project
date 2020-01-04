@@ -11,7 +11,8 @@ import java.util.Map;
 
 
 /**
- * @author shuang.kou
+ * Description: Auth Controller
+ * Created By xxm
  */
 @RestController
 @RequestMapping("/auth")

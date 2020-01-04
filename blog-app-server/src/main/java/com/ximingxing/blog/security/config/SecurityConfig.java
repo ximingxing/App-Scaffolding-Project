@@ -1,10 +1,10 @@
 package com.ximingxing.blog.security.config;
 
-import github.javaguide.springsecurityjwtguide.security.exception.JWTAccessDeniedHandler;
-import github.javaguide.springsecurityjwtguide.security.exception.JWTAuthenticationEntryPoint;
-import github.javaguide.springsecurityjwtguide.security.filter.JWTAuthenticationFilter;
-import github.javaguide.springsecurityjwtguide.security.filter.JWTAuthorizationFilter;
-import github.javaguide.springsecurityjwtguide.security.service.UserDetailsServiceImpl;
+import com.ximingxing.blog.security.exception.JWTAccessDeniedHandler;
+import com.ximingxing.blog.security.exception.JWTAuthenticationEntryPoint;
+import com.ximingxing.blog.security.filter.JWTAuthenticationFilter;
+import com.ximingxing.blog.security.filter.JWTAuthorizationFilter;
+import com.ximingxing.blog.security.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
@@ -17,9 +17,9 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-
 /**
- * @author shuang.kou
+ * Description: Spring Security
+ * Created By xxm
  */
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)

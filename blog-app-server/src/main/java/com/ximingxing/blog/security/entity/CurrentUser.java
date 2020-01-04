@@ -6,8 +6,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
 /**
- * @author shuang.kou
- * 获取当前请求的用户
+ * Description: 获取当前请求的用户
+ * Created By xxm
  */
 @Component
 public class CurrentUser {

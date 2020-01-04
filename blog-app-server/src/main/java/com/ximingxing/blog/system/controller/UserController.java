@@ -9,14 +9,14 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author shuang.kou
+ * Description: UserController
+ * Created By xxm
  */
 @RestController
 @RequestMapping("/api")
 public class UserController {
 
     private final UserService userService;
-
     private final CurrentUser currentUser;
 
     public UserController(UserService userService, CurrentUser currentUser) {
@@ -26,12 +26,12 @@ public class UserController {
 
     @GetMapping("/users")
     @PreAuthorize("hasAnyRole('ROLE_DEV','ROLE_PM','ROLE_ADMIN')")
-    public ResponseEntity<Page<User>> getAllUser(@RequestParam(value = "pageNum", defaultValue = "0") int pageNum, @RequestParam(value = "pageSize", defaultValue = "10") int pageSize) {
+    public ResponseEntity<Page<User>> getAllUser(@RequestParam(value = "pageNum", defaultValue = "0") int pageNum,
+                                                 @RequestParam(value = "pageSize", defaultValue = "10") int pageSize) {
         System.out.println("当前访问该接口的用户为：" + currentUser.getCurrentUser().toString());
         Page<User> allUser = userService.getAllUser(pageNum, pageSize);
         return ResponseEntity.ok().body(allUser);
     }
-
 
     @DeleteMapping("/user")
     @PreAuthorize("hasAnyRole('ROLE_ADMIN')")

@@ -17,6 +17,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Description: Swagger
+ * Created By xxm
+ */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
@@ -33,14 +37,15 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("github.javaguide.springsecurityjwtguide"))
+                .apis(RequestHandlerSelectors.basePackage("com.ximingxing.blog"))
                 .paths(PathSelectors.any())
                 .build()
                 .globalOperationParameters(pars);
     }
+
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Spring Security JWT Guide")
+                .title("Blog App Server")
                 .build();
     }
 }

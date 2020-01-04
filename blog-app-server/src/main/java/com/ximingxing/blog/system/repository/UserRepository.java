@@ -7,7 +7,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Optional;
 
 /**
- * @author shuang.kou
+ * Description: UserRepository
+ * Created By xxm
  */
 public interface UserRepository extends JpaRepository<User, Integer> {
     Optional<User> findByUsername(String username);

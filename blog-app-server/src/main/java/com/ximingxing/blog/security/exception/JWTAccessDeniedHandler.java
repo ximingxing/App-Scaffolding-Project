@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author shuang.kou
- * AccessDeineHandler 用来解决认证过的用户访问无权限资源时的异常
+ * Description: 用来解决认证过的用户访问无权限资源时的异常
+ * Created By xxm
  */
 public class JWTAccessDeniedHandler implements AccessDeniedHandler {
     /**

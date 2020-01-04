@@ -4,7 +4,8 @@ import lombok.Data;
 
 
 /**
- * @author shuang.kou
+ * Description: Login User Entity
+ * Created By xxm
  */
 @Data
 public class LoginUser {
@@ -12,5 +13,4 @@ public class LoginUser {
     private String username;
     private String password;
     private Boolean rememberMe;
-
 }
