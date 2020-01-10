@@ -1,6 +1,9 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
 bin/
+src/main/resources/application-prod.properties
+*.log
+*.gz
 
 ### STS ###
 .apt_generated
@@ -29,4 +32,3 @@ nbdist/
 !.elasticbeanstalk/*.global.yml
 .ebextensions
 
-src/main/resources/application-prod.properties
