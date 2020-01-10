@@ -93,7 +93,6 @@ pagehelper:
   params: count=countSql
 
 logging:
-  path: /log
   file: ids.log
   level:
     root: info

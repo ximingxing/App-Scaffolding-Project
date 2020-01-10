@@ -62,13 +62,13 @@ spring:
         login-password: druid
   # Hibernate Properties
   jpa:
+    database: mysql
     hibernate:
       ddl-auto: update
     show-sql: true
     open-in-view: false
 
 logging:
-  path: /log
   file: ids-test.log
   level:
     root: info

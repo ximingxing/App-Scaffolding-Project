@@ -62,6 +62,7 @@ spring:
         login-password: druid
   # Hibernate Properties
   jpa:
+    database: mysql
     hibernate:
       ddl-auto: update
     show-sql: true
@@ -69,7 +70,6 @@ spring:
 
 # Logback
 logging:
-  path: /log
   file: blog-app-server.log
   level:
     root: WARN
